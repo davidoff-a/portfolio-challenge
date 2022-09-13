@@ -1,0 +1,39 @@
+.block {
+  @extend %block;
+
+  &__title {
+    @include text($size: 18px, $weight: 700, $color: $title-color);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &_person {
+    grid-column: 1/3;
+  }
+
+  &_skills {
+    grid-column: 1/2;
+    @include flex-d($direction: column, $align: flex-start);
+  }
+
+  &_experiences {
+    grid-column: 1/2;
+    @include flex-d($direction: column, $align: flex-start);
+  }
+
+  &_hobbies {
+    grid-column: 1/2;
+    @include flex-d($direction: column, $align: flex-start);
+  }
+
+  &__heading {
+    grid-column: 2/3;
+    grid-row-start: 2;
+    height: 60px;
+  }
+
+  &_blog{
+    grid-column: 2/3;
+  }
+
+}

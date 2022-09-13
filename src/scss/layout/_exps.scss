@@ -1,0 +1,42 @@
+.experiences {
+  &__list {
+    @include flex-d($direction: column, $align: flex-start);
+  }
+
+  &__item {
+    @include flex-d($align: flex-start);
+  }
+}
+
+.job {
+
+  &__img {
+    @include photo($width: 84px, $height: 84px);
+    object-fit: contain;
+    flex-basis: 30%;
+  }
+
+  &__info {
+    @include flex-d($direction: column, $align: flex-start);
+    flex-basis: 60%;
+  }
+
+  &__period {
+    @include text($size: 14px, $color: $descr-color);
+    margin-bottom: 12px;
+  }
+
+  &__name {
+    @include text($color: $subtitle-color);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  &__about {
+    @include text;
+  }
+}
+
+.job:not(:last-child) {
+  margin-bottom: 39px;
+}

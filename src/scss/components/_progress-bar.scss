@@ -1,0 +1,30 @@
+.pr-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__label {
+    //width: 40%;
+    @include text($color: $title-color);
+    flex-basis: 40%;
+  }
+
+  &__meter {
+    //width: 55%;
+    flex-basis: 55%;
+    height: 10px;
+    position: relative;
+    background-color: $btn-bg;
+    border-radius: $brad;
+  }
+
+  &__level {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $btn-accent;
+    border-radius: $brad;
+  }
+}

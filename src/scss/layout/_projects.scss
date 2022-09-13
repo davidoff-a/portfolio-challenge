@@ -1,0 +1,42 @@
+.projects {
+  &__item {
+    grid-row-start: 2;
+    grid-column: 2/3;
+    @include flex-d($align: flex-start)
+  }
+
+  &__img {
+    @include photo($width: 35%);
+    object-fit: cover;
+    flex-basis: 35%;
+  }
+
+  &__info {
+    flex-basis: 55%;
+    margin-left: 20px;
+  }
+
+  &__hashtags {
+    @include text($color: $title-color);
+    @include flex-d;
+    margin-bottom: 25px;
+  }
+
+  &__name {
+    text-transform: capitalize;
+    margin-bottom: 18px;
+    @include text($size: 24px, $color: $subtitle-color);
+  }
+
+  &__about {
+    @include text;
+    margin-bottom: 50px;
+  }
+
+  &__controls {
+    @include flex-d;
+    justify-content: center;
+  }
+
+
+}

@@ -1,0 +1,26 @@
+.hobbies {
+  width: 100%;
+
+
+  &__list {
+    width: 100%;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 36px;
+  }
+
+  &__img {
+    @include photo($width: 100%, $height: auto);
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    @include text($size: 18px, $weight: 600, $color: $subtitle-color);
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    @include text($color: $descr-color);
+  }
+}

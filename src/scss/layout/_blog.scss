@@ -1,0 +1,41 @@
+.blog {
+  @include flex-d($align: flex-start);
+  overflow: hidden;
+  position: relative;
+
+  &__text {
+    @include flex-d($direction: column, $align: flex-start);
+    flex-basis: 60%;
+    margin-right: 20px;
+  }
+
+  &__tag {
+    @include text($color: #E0E0E0);
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include text($color: $subtitle-color, $size: 24px);
+    margin-bottom: 26px;
+  }
+
+  &__content {
+    @include text;
+    margin-bottom: 21px;
+
+    & p {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    @include text($color: $btn-accent)
+  }
+
+  &__img {
+    @include photo($width: 75%, $height: auto);
+    position: absolute;
+    top: 22px;
+    right: -35%;
+  }
+}

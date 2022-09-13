@@ -1,0 +1,56 @@
+.person {
+  width: 100%;
+
+  &__photo {
+    @include photo($width: 272px, $height: 266px);
+  }
+
+  &__info {
+    flex-basis: 70%;
+    margin-left: 25px;
+    display: grid;
+    grid-template: 30px 30px auto / 210px auto 210px;
+    gap: 25px;
+  }
+}
+
+.contacts {
+  &__name {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    @include text($color: $title-color, $size: 24px, $weight: 600)
+
+  }
+
+  &__job {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    @include text($color: $descr-color, $size: 18px, $weight: 500)
+  }
+
+  &__email {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    @include flex-d;
+    justify-content: space-around;
+
+  }
+
+  &__phone {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    @include flex-d;
+    justify-content: space-around;
+  }
+
+  &__about {
+    @include text($color: $descr-color, $size: 18px, $weight: 500);
+    grid-column: 1/4;
+    grid-row: 3/4;
+
+    & p {
+      margin-top: 15px;
+    }
+  }
+}

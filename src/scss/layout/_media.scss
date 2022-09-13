@@ -1,0 +1,56 @@
+@include tablet {
+  .container {
+    grid-template: auto / 100%;
+  }
+
+  .person {
+    grid-column: 1/2;
+    flex-direction: column;
+
+    &__info {
+      grid-template: 30px 30px auto / repeat(2, 1fr);
+    }
+
+    &__photo {
+      flex: 0 0 266px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+  .main {
+    grid-column: 1/2;
+  }
+  .blog__text {
+    flex-basis: 100%;
+  }
+  .blog__img {
+    position: static;
+    margin: 0 auto 20px;
+  }
+}
+
+@include mobile {
+  .block.projects__item {
+    flex-direction: column;
+  }
+
+  .projects__img {
+    width: 80%;
+    height: auto;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .experiences__item {
+    flex-direction: column;
+  }
+  .job__img {
+    width: 20%;
+    height: auto;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .footer {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,26 @@
+%block {
+  width: 100%;
+  min-height: 60px;
+  padding: 22px;
+  display: flex;
+  border-radius: $brad;
+  background-color: $bg-block;
+}
+
+%image {
+  min-height: 60px;
+  min-width: 60px;
+  object-fit: cover;
+  border-radius: $brad;
+}
+
+%normaltext {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+%flex-dir {
+  display: flex;
+  justify-content: space-between;
+}

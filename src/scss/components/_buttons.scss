@@ -1,0 +1,22 @@
+.btn {
+  width: 135px;
+  height: 46px;
+  border-radius: $brad;
+  line-height: 46px;
+  text-align: center;
+  &:first-child{
+    margin-right: 20px;
+  }
+
+
+  &_fill {
+    @include text($color: $bg-color, $size: 18px);
+    background-color: $btn-accent;
+  }
+
+  &_outline {
+    @include text($color: $btn-accent, $size: 18px);
+    background-color: $bg-color;
+    border: 2px solid $btn-accent;
+  }
+}

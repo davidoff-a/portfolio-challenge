@@ -1,0 +1,43 @@
+@mixin photo($width:100%, $height:auto) {
+  @extend %image;
+  width: $width;
+  height: $height;
+  flex: 0 1 $width;
+}
+
+@mixin text($size:16px, $weight:500, $color:$descr-color) {
+  @extend %normaltext;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin flex-d($direction: row, $align: center) {
+  @extend %flex-dir;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin desktop() {
+  @media(max-width: $breakpoint_xxl) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media(max-width: $breakpoint_xl) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media(max-width: $breakpoint_md) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media(max-width: $breakpoint_sm) {
+    @content;
+  }
+}
